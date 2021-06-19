@@ -1,0 +1,29 @@
+<table class="table table-striped table-dark table-bordered">
+    <thead class="tbody bg-primary">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th> Quantity </th>
+        <th> #Item </th>
+        <th>Img</th>
+        <th> Buy </th>
+        <!-- <th>Quntaity</th> -->
+    </thead>
+    <tbody class="table table-broder bg-light">
+    <tbody>
+
+        <tr *ngFor="let prd of getProductsByCatID(); let i=index"class="tbody bg-gray">
+            <td>{{i+1}}</td>
+            <td>{{prd.name}}</td>
+            <td>{{prd.price|currency:"EGP "}}</td>
+             <td> {{prd.quntity}}</td>
+            <td> <input #Pcount type="number"></td>
+            <td> <img [src]="prd.img" alt="Card image" class="rounded-circle" width="60px" height="60px"></td>
+            <td><button class="btn btn-primary" (click)="TotalPrice(prd.price,Pcount.value)">Buy</button></td>
+        </tr>
+
+    </tbody>
+</table>
+<!-- <div class="alert alert-info p-4">
+    Total Price in Child : {{total}}
+</div> -->

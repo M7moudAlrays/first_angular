@@ -1,0 +1,12 @@
+
+<div class="form-group mt-5">
+    <label for="" class="text-primary">Categories</label>
+    <select #SelCat class="form-control" name="catList" [(ngModel)]="catID">
+        <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
+    </select>
+</div>
+<!-- {{catID}} -->
+
+<h3 #hThree class="alert alert-success"> Total price Is : {{TotalInParent}}</h3>
+
+<app-child [selectedCatID]="catID" (TotalPriceChangedEvent)="TotalPriceInParent($event)"></app-child>

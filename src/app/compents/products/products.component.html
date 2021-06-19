@@ -1,0 +1,70 @@
+<!-- <h4 class="text-center alert alert-info "> Hello From Products Components  </h4>
+<h5 class="text-center  alert alert-danger"> Congratulations!! You Created your first project! </h5> -->
+ <!-- <h3 class="text-center alert alert-danger"> Store Name Is : {{StoreName}} </h3>  -->
+
+
+<!-- <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" 
+  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    All Categories
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+    <a  *ngFor="let prd of products" class="dropdown-item" href="#">{{prd.name}}</a>
+  </div>
+</div> -->
+
+<h5 class="text-center  alert alert-danger"> Hello ! In Your Product Component </h5>
+<table class="table">
+    <thead class="tbody bg-info">
+        <th>No.</th>
+        <th>Name</th>
+        <th>Quntaity</th>
+        <th>Price</th>
+        <th>Img</th>
+    </thead>
+    <tbody class="table table-broder bg-light">
+        <!-- <tr *ngFor="let prd of products; let i=index" [ngStyle]="{'color':(prd.quntity==0)?'red':'',
+            'background-color':(prd.quntity==1)?'orange':'','font-size':(prd.quntity>1)?'22px':''}"> -->
+        <tr *ngFor="let prd of products; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{prd.name|uppercase}}</td>
+            <td>
+                <span *ngIf="prd.quntity==0 disabled">Out of Stock </span>
+                <span *ngIf="prd.quntity==1">Last Item</span>
+                <span *ngIf="prd.quntity>1">{{prd.quntity}}</span>
+                
+                <!-- <span [ngSwitch]="prd.quntity">
+                    <p *ngSwitchCase="0">
+                        Out of Stock
+                    </p>
+                    <p *ngSwitchCase="1">
+                        Last Item
+                    </p>
+                    <p *ngSwitchDefault>
+                        {{prd.quntity}}
+
+                    </p>
+                </span> -->
+            </td>
+            <td>{{prd.price|currency:"USD":true}}</td>
+            <td><img src="{{prd.img}}" width="60px" height="50px"></td>
+        </tr>
+
+    </tbody>
+</table>
+
+<!-- <div class="alert alert-info text-center">
+     <hr> <h5> First way of Binding  : <input [value]="ClientName"> </h5>
+    <hr> <h5> Second Way of Binding : <input [(ngModel)]="ClientName" > </h5> <hr> -->
+    <!-- <h5> Decimal pipe </h5>
+    <b> {{454.78767814 | number: '3.4'}}</b>  -->
+    <!-- <h5> Percent pipe </h5>
+    <b> {{StoreName|slice:2:5 }}</b>  -->
+    <!-- <h5> Json pipe </h5>
+    <b> {{0000.54565 | json}}</b>  -->
+    <!-- <h5> Percent Pipe </h5>
+    <b> {{0000.545 | percent}}</b>  -->
+
+<!-- </div> --> 
+
+

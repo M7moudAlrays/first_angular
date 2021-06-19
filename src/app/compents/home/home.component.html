@@ -1,0 +1,19 @@
+
+<!-- <div class="ground">
+    <img [src]="br" alt="Card image" class="rounded" width="100%" >
+</div> -->
+
+
+<div class="container-fluid">
+    <div class="row text-center p-2">
+        <div class="col-lg-4 col-sm-12 mb-2 mt-2 p-2 card"  *ngFor="let prd of products; let i=index">
+            <img [src]="prd.img" alt="Card image" class="rounded" width="100%" height="350px">
+            <div class="card-body">
+                <h5 class="rounded alert-info text-center p-3"> {{prd.name}} </h5>
+                <!-- <p class="alert-info text-center p-3 "> {{prd.price|currency:"EGP "}} </p> -->
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                <a [routerLink]="['/product', prd.id]" class="btn btn-info p-2"  data-target='details-1'>More Details</a>
+            </div>
+        </div>
+    </div>
+</div>

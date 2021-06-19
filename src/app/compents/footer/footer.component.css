@@ -1,0 +1,49 @@
+body
+{
+  background-color: wheat;
+}
+li
+{
+  list-style-type: none;
+  margin-left: 1vw;
+}
+
+li:first-child
+{
+  margin:0;
+}
+
+footer
+{  
+  padding: 20px 0px;
+  margin-top: 50px;
+}
+
+.container
+{
+  background-color: beige;
+}
+
+.copyright,  .impressum
+{
+  text-align: center;
+}
+
+.logo
+{
+  height: 8vh;
+}
+
+@media (max-width: 768px) 
+{
+  li
+  {
+    margin-left: 0;
+    margin-bottom: 1vh;
+  }
+  
+  .sozial
+  {
+    margin-bottom: 1vh;
+  }
+}

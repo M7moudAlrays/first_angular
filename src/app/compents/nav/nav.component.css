@@ -1,0 +1,8 @@
+.ground
+{  
+    /* background-image: url('../../../assets/ground3.jpeg') ;   */
+    height:800px;
+    background-attachment: fixed ;
+    display:block;
+    background-size:100% 100%; 
+}
